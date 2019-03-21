@@ -1,0 +1,56 @@
+<div class="form-body text-center">
+    <form class="form-signin" (ngSubmit)="onSignup(f)" #f="ngForm">
+    
+      <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
+      
+      <div class="form-group">
+        <label for="email" class="sr-only">Email address</label>      
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          required
+          ngModel
+          class="form-control" 
+          placeholder="Email address" 
+          autofocus>
+      </div>
+      
+      <div class="form-group">
+        <label for="password" class="sr-only">Password</label>      
+        <input 
+          type="password" 
+          required
+          id="password" 
+          name="password"
+          ngModel
+          class="form-control" 
+          placeholder="Password">
+      </div>
+
+      <div class="form-group">
+          <label for="password_confirmation" class="sr-only">Password Confirmation</label>      
+          <input 
+            type="password" 
+            required
+            id="password_confirmation" 
+            name="password_confirmation"
+            ngModel
+            class="form-control" 
+            placeholder="Password Confirmation">
+        </div>      
+    
+      <div class="checkbox mb-3">
+        <label>  
+          <input type="checkbox" value="remember-me"> Remember me  
+        </label>  
+      </div>
+    
+      <button 
+        class="btn btn-lg btn-primary btn-block" 
+        [disabled]="!(f.valid)" 
+        type="submit">Sign up</button>
+    
+      <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+    </form>
+  </div>
